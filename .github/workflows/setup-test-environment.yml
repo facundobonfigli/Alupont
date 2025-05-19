@@ -30,14 +30,14 @@ jobs:
     # cache-dependency-path: 'scripts/package.json'
           
       - name: Install dependencies
-        run: |
-          cd scripts
-          npm install
+     run: |
+       cd alupont/scripts  # Update this path
+       npm install
           
       - name: Setup test environment
-        env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
-        run: |
-          cd scripts
-          node setup-test-environment.js
+     env:
+       SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+       SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+     run: |
+       cd alupont/scripts  # Update this path
+       node setup-test-environment.js
