@@ -25,7 +25,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
+    # Remove the cache line completely or update it to the correct path
+    # cache: 'npm'
+    # cache-dependency-path: 'scripts/package.json'
           
       - name: Install dependencies
         run: |
